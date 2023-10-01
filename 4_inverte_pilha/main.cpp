@@ -70,7 +70,7 @@ void inverte_C(std::stack<char>* p) {
     while (i < N) {
         old_top = p->top();
         p->pop();
-        while (p->size() > 0) {
+        while (p->size() > i) {
             p1.push(p->top());
             p->pop();
         }
