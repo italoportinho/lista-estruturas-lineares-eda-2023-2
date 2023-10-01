@@ -1,7 +1,7 @@
 // Copyright (C) 2023 - Italo Portinho
 #include <cstdio>
 #include "./deque.hpp"
-
+// Para compilar: g++ main.cpp -o main
 int main() {
 /*
     Deque meu_deque = {};
