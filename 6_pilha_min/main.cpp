@@ -1,6 +1,6 @@
 // Copyright (C) 2023 - Italo Portinho
 #include<cstdio>
-#include "./pilha_min.hpp"
+#include "./pilha_min_alt.hpp"
 
 int main() {
     PilhaMin pilha = {};
