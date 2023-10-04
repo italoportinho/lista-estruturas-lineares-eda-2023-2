@@ -2,12 +2,12 @@
 
 
 // Obter o menor elemento de uma pilha em tempo constante;
-// Vamos manter  uma variável com o valor mínimo e na hora de
+//      Vamos manter  uma variável com o valor mínimo e na hora de
 //  empilhar um elemento, fazemos uma comparação para atualizar
 //  o mínimo, se for necessário. Essa estratégia funciona, porém
 //  surge um problema quando desempilhamos o elemento mínimo. Como
 //  encontrar o novo valor mínimo?
-// Qualquer abordagem que usasse alguma estrutura para manter os
+//      Qualquer abordagem que usasse alguma estrutura para manter os
 //  valores ordenados, ou guardar os mínimos com ponteiros para
 //  o próximo mínimo exigiria percorrer a estrutura, o que
 //  violaria a regra de tempo constante. Portanto se faz necessário
@@ -18,6 +18,20 @@
 //
 //  topo = new_min - old_min
 //
+//      Quando o valor mínimo atual for desempilhado, para atualizar o
+// valor mínimo temos:
+//
+//  old_min = min - topo
+//
+// Aonde topo é a função do min com old_min sendo desempilhado, min
+// é o mínimo correspondente a este valor (o que de fato é retornado no pop),
+// e topo é o topo da pilha.
+//
+// COMPLEXIDADE:
+// topo: O(1)
+// empilha: O(1)
+// desempilha: O(1)
+// obterMinimo: O(1)
 
 class NoPilhaMin {
  public:
@@ -40,7 +54,14 @@ class PilhaMin {
         this->old_min = 0;
     }
     int topo() {
-        return this->inicio->dado;
+        //      Se o topo for menor que o mínimo então o que empilhado é
+        // a função do mínimo, e devemos retornar o mínimo.
+        // Senão basta retornar o dado do inicio.
+        if (this->inicio->dado < this->obterMinimo()) {
+            return this->obterMinimo();
+        } else {
+            return this->inicio->dado;
+        }
     }
     void empilha(int novo) {
         NoPilhaMin* no = new NoPilhaMin{ .dado = novo, .prox = this->inicio };
