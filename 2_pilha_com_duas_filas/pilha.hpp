@@ -15,7 +15,7 @@
 // COMPLEXIDADE:
 //    topo: O(1) - assumindo que std::queue ter ponteiro para o final da fila.
 //    empilha: O(1) - assumindo complexidade constante de push (como no deque).
-//    desempilha: O(N)
+//    desempilha: O(N) - é preciso percorrer a fila toda.
 
 class Pilha2F {
  public:
