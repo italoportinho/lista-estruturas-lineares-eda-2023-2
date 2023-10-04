@@ -18,7 +18,7 @@ class Fila2P {
 //  todo mundo de p2 de volta para p1. Dessa forma, o método top()
 //  da pilha vai poder se usado como o método front() da fila.
 // Para saber quem está no final da fila, método back(), sempre
-//  atualizamos esse valor ao enfileiras alguém.
+//  atualizamos esse valor ao enfileirar alguém.
 // COMPLEXIDADE: O(N)
     void enfileira(char dado) {
         int i = 0;
