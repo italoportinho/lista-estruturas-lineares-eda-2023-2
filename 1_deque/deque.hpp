@@ -1,8 +1,5 @@
 // Copyright (C) 2023 - Italo Portinho
 #include <iostream>
-#ifndef DEQUE_HPP_
-#define DEQUE_HPP_
-
 
 // Primeiramente vamos definir o tipo do nó a ser usado no Deque:
 class NoDeque {
@@ -141,6 +138,13 @@ class Deque {
 //---------------------------------------------------------------
 // 1b)
 //---------------------------------------------------------------
+//      Para implementar uma pilha usando o deque, inserimos e removemos
+// no fim do deque.
+//      COMPLEXIDADE:
+// empilha: a mesma complexidade de insereFim, O(1).
+// desempilha: a mesma complexidade de removeFim, O(1).
+// topo: O(1).
+// tamanho: O(1).
 class PilhaDeque {
  public:
     Deque d;
@@ -161,11 +165,22 @@ class PilhaDeque {
 //---------------------------------------------------------------
 // 1c)
 //---------------------------------------------------------------
+//      Para implementar um fila usando o deque, devemos inserir e remover
+// em extremos opostos do deque. Aqui vou inserir no fim e remover do inicio.
+//      COMPLEXIDADE:
+// enfileira: a mesma complexidade de insereFim, O(1).
+// desenfileira: a mesma complexidade de removeInicio, O(1).
+// frente: O(1).
+// fim: O(1)
+// tamanho: O(1).
 class FilaDeque {
  public:
     Deque d;
     char frente() {
         return d.inicio->dado;
+    }
+    char fim() {
+        return d.fim->dado;
     }
     void enfileira(char novo) {
         d.insereFim(novo);
@@ -177,5 +192,3 @@ class FilaDeque {
         return d.N;
     }
 };
-
-#endif  // DEQUE_HPP_
