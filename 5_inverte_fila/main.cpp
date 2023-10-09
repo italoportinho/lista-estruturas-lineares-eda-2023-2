@@ -4,7 +4,9 @@
 #include<queue>
 #include<cstdio>
 
-// Inverter uma fila usando somente uma pilha.
+// ----------------------------------------------------------------
+//          Inverter uma fila usando somente uma pilha.
+// ----------------------------------------------------------------
 // A estratégia aqui é todos os transferir os elementos da fila
 //  para a pilha. Em seguida transferir de volta para a fila e,
 //  os elementos estarão com a ordem invertida. A estratégia funciona
@@ -23,7 +25,9 @@ void inverte_A(std::queue<char>* f) {
     }
 }
 
-// Inverter uma fila usando somente duas filas.
+// ----------------------------------------------------------------
+//          Inverter uma fila usando somente duas filas.
+// ----------------------------------------------------------------
 // A estratégia aqui é passar N - 1 elementos para a fila auxiliar f1,
 //  e o elemento restante para a fila f2. Quem foi para f1 retorna para
 //  a fila original e repetimos o cicloaté que todos os elementos estejam

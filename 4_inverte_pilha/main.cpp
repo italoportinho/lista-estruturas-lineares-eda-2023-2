@@ -3,8 +3,9 @@
 #include<stack>
 #include<queue>
 #include<cstdio>
-
-// Inverter uma pilha usando uma fila
+// ----------------------------------------------------------------
+//          Inverter uma pilha usando uma fila
+// ----------------------------------------------------------------
 // A estratégia aqui é transferir todos os elementos para a fila,
 //   e em seguida transferi-los de volta para a pilha.
 // COMPLEXIDADE: O(N) - percorre a pilha e a fila inteiras uma vez cada.
@@ -20,7 +21,9 @@ void inverte_A(std::stack<char>* p) {
     }
 }
 
-// Inverter uma pilha usando duas pilhas.
+// ----------------------------------------------------------------
+//          Inverter uma pilha usando duas pilhas.
+// ----------------------------------------------------------------
 // A estratatégia aqui é transferir todos os elementos da pilha
 //  original para a pilha auxiliar p1. Em seguida transferir N - 1
 //  elementos de p1 para p2. O primeiro elemento da pilha original está em p1,
@@ -54,7 +57,9 @@ void inverte_B(std::stack<char>* p) {
     }
 }
 
-// Inverter uma pilha usando somente outra pilha.
+// ----------------------------------------------------------------
+//          Inverter uma pilha usando somente outra pilha.
+// ----------------------------------------------------------------
 // A estratégia aqui é guardar o topo e transferir N - i elementos
 //  para a pilha auxiliar, com i = 0 inicialmente. Em seguida, topo
 //  volta para a pilha original, e todos os elementos da pilha
